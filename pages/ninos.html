@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <script
+      src="https://kit.fontawesome.com/bdb91eed40.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/stylesheet.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marca de ropa</title>
+  </head>
+
+  <body>
+     
+    <header>
+      <a href="../index.html"
+        ><img class="logo" src="../images/logo.png" alt=""
+      /></a>
+
+      <nav>
+        <div class="div_nav" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul class="nav__links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="hombre.html">Hombre</a></li>
+            <li><a href="Mujer.html">Mujer</a></li>
+            <li><a href="ninos.html">Ninos</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+    <footer>Conoce mas, politica de cookies</footer>
+  </body>
+</html>
