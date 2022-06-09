@@ -7,6 +7,7 @@
     ></script>
 
     <link rel="stylesheet" href="css/stylesheet.css" />
+   
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,9 +15,11 @@
   </head>
 
   <body>
+    <body class="bg-black">
     <header>
-      <a href="index.html"><img class="logo" src="images/logo.png" alt="" /></a>
-
+      <a href="index.html"
+        ><img src="../images/logo.png" alt="" class="logo"
+      /></a>
       <nav>
         <div class="div_nav" id="navLinks">
           <i class="fa fa-times" onclick="hideMenu()"></i>
@@ -29,14 +32,19 @@
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
-      <a class="button" href="pages/Contacto.html"><button>Contacto</button></a>
+      <a class="" href="pages/Contacto.html">
+        <button type="button" class="botoncito">
+          Contacto
+        </button></a
+      >
     </header>
+    <!--Imagenes-->
     <div class="container">
       <div class="">
         <img src="images/buzo.png" alt="" />
       </div>
 
-      <div class="img">
+      <div class="">
         <img src="images/remera.png" alt="" />
       </div>
 
@@ -44,7 +52,8 @@
         <img src="images/zapas.png" alt="" />
       </div>
     </div>
-    <h1>hola mundo</h1>
+    <footer>Conoce mas, politica de cookies</footer>
+    
     <script>
       var navLinks = document.getElementById("navLinks");
       function showMenu() {
@@ -54,6 +63,5 @@
         navLinks.style.right = "-200px";
       }
     </script>
-    <footer>Conoce mas, politica de cookies</footer>
   </body>
 </html>

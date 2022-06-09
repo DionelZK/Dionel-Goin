@@ -3,13 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  background-color: #101010;
   font-family: "Montserrat", sans-serif;
-  color: white;
 }
-
+body {
+  background-color: black;
+}
 li,
 a {
   font-weight: 400;
@@ -22,7 +20,6 @@ header {
   padding: 30px 10%;
 }
 .logo {
-  font: white;
   width: 100px;
   cursor: pointer;
   margin-right: auto;
@@ -33,14 +30,18 @@ header {
 .nav__links li {
   display: inline-block;
   padding: 0px 20px;
+  color: white;
 }
 .nav__links li a {
+  text-decoration: none;
+  color: white;
   transition: all 0.3s ease 0s;
 }
 .nav__links li a:hover {
   color: #057e9c;
 }
-button {
+.botoncito {
+  text-decoration: none;
   padding: 10px 25px;
   font-weight: 400;
   background-color: rgba(0, 136, 169, 1);
@@ -49,7 +50,8 @@ button {
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
-button:hover {
+.botoncito:hover {
+  color: white;
   background-color: rgba(0, 136, 169, 0.8);
 }
 
@@ -64,14 +66,10 @@ button:hover {
   justify-items: center;
   align-items: center;
 }
-.img {
+.container img {
   display: flex;
   width: auto;
   height: 500px;
-}
-.img img {
-  width: 500px;
-  height: auto;
 }
 .zapas {
   display: flex;
@@ -107,11 +105,14 @@ nav .fa {
 }
 
 /*    forms  */
-fieldset {
-  margin-right: 33%;
-  margin-left: 33%;
-}
 
+div label {
+  color: white;
+}
+/*  footer */
+footer {
+  color: white;
+}
 /*     MEDIA QUERIES */
 
 @media screen and (max-width: 320px) {
