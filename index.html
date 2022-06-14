@@ -5,6 +5,7 @@
       src="https://kit.fontawesome.com/bdb91eed40.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/stylesheet.css" />
    
@@ -15,7 +16,7 @@
   </head>
 
   <body>
-    <body class="bg-black">
+    <body class="bg-black text-white">
     <header>
       <a href="index.html"
         ><img src="images/logo.png" alt="" class="logo"
@@ -30,17 +31,14 @@
             <li><a href="pages/ninos.html">Ninos</a></li>
           </ul>
         </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
-      </nav>
-      <a class="" href="pages/Contacto.html">
-        <button type="button" class="botoncito">
+      </nav><a class="" href="pages/Contacto.html">
+        <button type="button" class="btn btn-info rounded-pill text-white">
           Contacto
         </button></a
       >
     </header>
-    <h1>Cambios para la first branch</h1>
     <!--Imagenes-->
-    <div class="container">
+    <div class="contenedor">
       <div class="">
         <img src="images/buzo.png" alt="" />
       </div>
@@ -53,16 +51,23 @@
         <img src="images/zapas.png" alt="" />
       </div>
     </div>
-    <footer>Conoce mas, politica de cookies</footer>
+    <div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+    <p class="col-md-4 mb-0 text-white">&copy; 2022 Company, Inc</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img src="images/logo.png" alt=" "class="bi me-2" width="40" height="32">
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+    </ul>
+  </footer>
+</div>
     
-    <script>
-      var navLinks = document.getElementById("navLinks");
-      function showMenu() {
-        navLinks.style.right = "0";
-      }
-      function hideMenu() {
-        navLinks.style.right = "-200px";
-      }
-    </script>
   </body>
 </html>
