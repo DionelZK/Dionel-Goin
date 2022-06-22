@@ -7,12 +7,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-li,
-a {
-  font-weight: 400;
-  font-size: 16px;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,30 +20,36 @@ header {
   padding: 30px 10%;
 }
 
-.logo {
+header .logo {
   width: 100px;
   cursor: pointer;
   margin-right: auto;
 }
 
-.nav__links {
+header li,
+header a {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+header nav .nav__links {
   list-style: none;
 }
 
-.nav__links li {
+header nav .nav__links li {
   display: inline-block;
   padding: 0px 20px;
   color: white;
 }
 
-.nav__links li a {
+header nav .nav__links li a {
   text-decoration: none;
   color: white;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
-.nav__links li a:hover {
+header nav .nav__links li a:hover {
   color: #057e9c;
 }
 
@@ -74,11 +74,11 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: auto;
-  height: 500px;
+  height: auto;
+  width: 500px;
 }
 
-.zapas {
+.contenedor .zapas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,7 +86,7 @@ header {
   height: 500px;
 }
 
-.zapas img {
+.contenedor .zapas img {
   width: auto;
   height: 179px;
   -ms-flex-item-align: center;
@@ -98,7 +98,7 @@ nav .fa {
   display: none;
 }
 
-/*       hombre    */
+/*hombre*/
 .parent {
   display: -ms-grid;
   display: grid;
@@ -131,8 +131,7 @@ div label {
   color: white;
 }
 
-/*  footer */
-/*     MEDIA QUERIES */
+/*  MEDIA QUERIES */
 @media screen and (max-width: 320px) {
   .container {
     display: -webkit-box;
