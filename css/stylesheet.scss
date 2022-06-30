@@ -39,7 +39,7 @@ header {
           color: white;
           transition: all 0.3s ease 0s;
           &:hover {
-            color: $colorprimario;
+            color: map-get($colores, azul);
           }
         }
       }
@@ -88,9 +88,27 @@ header {
 }
 
 /*    forms  */
-
+.formulario {
+  padding: 10px 100px;
+}
 div label {
   color: white;
+}
+.boton_enviar {
+  background-color: map-get($colores, azul);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.boton_borrar {
+  @extend .boton_enviar;
+  background-color: map-get($colores, rojo);
 }
 /*  MEDIA QUERIES */
 

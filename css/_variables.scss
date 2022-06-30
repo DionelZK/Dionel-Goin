@@ -1,2 +1,14 @@
 $colorprimario: #057e9c;
 $altura: 250px;
+
+$colores: (
+  rojo: rgb(158, 25, 25),
+  azul: #057e9c,
+  verde: green,
+);
+
+@each $color, $value in $colores {
+  .colores--#{$color} {
+    background-color: $value;
+  }
+}

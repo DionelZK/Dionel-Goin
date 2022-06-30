@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,800;1,400&display=swap");
+.colores--rojo {
+  background-color: #9e1919;
+}
+
+.colores--azul {
+  background-color: #057e9c;
+}
+
+.colores--verde {
+  background-color: green;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +42,10 @@ header li,
 header a {
   font-weight: 400;
   font-size: 16px;
+}
+
+header nav .fa {
+  display: none;
 }
 
 header nav .nav__links {
@@ -94,10 +110,6 @@ header nav .nav__links li a:hover {
   align-self: center;
 }
 
-nav .fa {
-  display: none;
-}
-
 /*hombre*/
 .parent {
   display: -ms-grid;
@@ -127,8 +139,30 @@ nav .fa {
 }
 
 /*    forms  */
+.formulario {
+  padding: 10px 100px;
+}
+
 div label {
   color: white;
+}
+
+.boton_enviar,
+.boton_borrar {
+  background-color: #057e9c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.boton_borrar {
+  background-color: #9e1919;
 }
 
 /*  MEDIA QUERIES */
