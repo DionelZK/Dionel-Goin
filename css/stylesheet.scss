@@ -8,10 +8,12 @@
   font-family: "Montserrat", sans-serif;
 }
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 10%;
+  min-width: 100vw;
+  padding: 0, 5rem 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 
   .logo {
     width: 100px;
@@ -19,32 +21,35 @@ header {
     margin-right: auto;
   }
 
-  li,
-  a {
-    font-weight: 400;
-    font-size: 16px;
-  }
-  nav {
-    .fa {
-      display: none;
-    }
-    .nav__links {
-      list-style: none;
-      li {
-        display: inline-block;
-        padding: 0px 20px;
-        color: white;
-        a {
-          text-decoration: none;
-          color: white;
-          transition: all 0.3s ease 0s;
-          &:hover {
-            color: map-get($colores, azul);
-          }
-        }
+  .navitem {
+    margin: 0 0 0 1.5rem;
+
+    .nav-link {
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: map-get($colores, azul);
       }
     }
   }
+}
+
+.contacto_link {
+  display: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    color: map-get($colores, azul);
+  }
+}
+
+li {
+  color: white;
 }
 /* HEADER */
 .contenedor {
@@ -55,21 +60,27 @@ header {
   row-gap: 15px;
   justify-items: center;
   align-items: center;
-
+  min-height: 79.7vh;
+  margin: 0;
+  padding: 0;
   img {
     display: flex;
-    @include sizes(auto, 500px);
+    @include sizes(auto, 70%);
+    margin: 0;
+    padding: 0;
   }
 
   .zapas {
     display: flex;
     width: auto;
     height: $altura * 2;
+    margin: 0;
+    padding: 0;
 
     img {
-      width: auto;
-      height: 179px;
-      align-self: center;
+      @include sizes(auto, 70%);
+      margin: 0;
+      padding: 0;
     }
   }
 }
@@ -78,6 +89,7 @@ header {
 .parent {
   @include grids;
 }
+
 .image_hombre {
   display: flex;
   width: auto;
@@ -85,14 +97,14 @@ header {
 }
 .image_hombre img {
   height: auto;
+  width: 100%;
 }
 
 /*    forms  */
 .formulario {
   padding: 10px 100px;
-}
-div label {
-  color: white;
+  min-height: 68vh;
+  padding: 0;
 }
 .boton_enviar {
   background-color: map-get($colores, azul);
@@ -110,37 +122,89 @@ div label {
   @extend .boton_enviar;
   background-color: map-get($colores, rojo);
 }
+.logo_footer {
+  color: black;
+}
 /*  MEDIA QUERIES */
 
-@media screen and (max-width: 320px) {
-  .container {
+@media screen and (max-width: 800px) {
+  header {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 0;
+
+    .contacto_link {
+      display: inline;
+    }
+    .boton_contacto {
+      display: none;
+    }
+    .navitem {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .container-fluid {
+    padding: 0px;
+  }
+  .navitem {
+    margin: 0;
+    padding: 0;
+  }
+  .boton_contacto {
+    display: none;
+  }
+  .contenedor {
     display: flex;
     flex-direction: column;
-  }
-
-  .container div {
-    justify-content: center;
     align-items: center;
+    div {
+      display: flex;
+      justify-content: center;
+      img {
+        height: auto;
+        width: 70%;
+      }
+    }
+    .zapas {
+      img {
+        height: 33%;
+        width: auto;
+      }
+    }
   }
-  .container div img {
-    align-self: center;
-    width: 370px;
-    height: auto;
+  .parent {
+    display: flex;
+    flex-direction: column;
+    img {
+      height: 350px;
+      width: auto;
+    }
+  }
+  .container {
+    div {
+      justify-content: center;
+      align-items: center;
+      img {
+        align-self: center;
+        width: 370px;
+        height: auto;
+      }
+    }
   }
   fieldset {
     margin: 20px;
   }
-  .div_nav {
-    position: absolute;
-    height: 100vh;
-    width: 200px;
-    top: 0;
-    right: -200px;
-    text-align: left;
-    z-index: 2;
-    transition: 1s;
+}
+@media screen and (max-width: 1400px) {
+  .parent {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .div_nav ul li {
-    display: block;
+}
+@media screen and (max-width: 990px) {
+  .boton_contacto {
+    display: none;
   }
 }

@@ -15,6 +15,11 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
 
     <link rel="stylesheet" href="../css/stylesheet.css" />
     <meta name="description" content="Tienda oficial de adidas argentina" />
@@ -22,32 +27,66 @@
     <title>Contacto</title>
   </head>
 
-  <body class="bg-black">
+  <body class="">
+    <!--HEADER-->
     <header>
-      <a href="../index.html"
-        ><img src="../images/logo.png" alt="" class="logo"
-      /></a>
-      <nav>
-        <div class="div_nav" id="navLinks">
-          <i class="fa fa-times" onclick="hideMenu()"></i>
-          <ul class="nav__links">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="hombre.html">Hombre</a></li>
-            <li><a href="Mujer.html">Mujer</a></li>
-            <li><a href="ninos.html">Ninos</a></li>
-          </ul>
+      <!--NAV-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"
+            ><img src="../images/logo.png" class="logo ms-3" alt=""
+          /></a>
+          <button
+            class="navbar-toggler ms-auto me-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hombre.html">Hombre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ninos.html">Niños</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Mujer.html">Mujer</a>
+              </li>
+              <li class="nav-item">
+                <a class="contacto_link nav-link" href="Contacto.html"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+          <a href="Contacto.html"
+            ><button
+              type="button"
+              class="boton_contacto btn btn-info rounded-pill text-white"
+            >
+              Contacto
+            </button>
+          </a>
         </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
-      <a class="" href="Contacto.html">
-        <button type="button" class="btn btn-info rounded-pill text-white">
-          Contacto
-        </button></a
-      >
     </header>
     <!--Formulario-->
-    <div class="container">
-      <div class="mb-3 formulario">
+    <div class="container formulario mt-3">
+      <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"
           >Direccion email</label
         >
@@ -58,9 +97,9 @@
           placeholder="name@example.com"
         />
       </div>
-      <div class="mb-3 formulario">
+      <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label"
-          >Mensaje</label
+          >mensaje</label
         >
         <textarea
           class="form-control"
@@ -71,9 +110,10 @@
         <button type="button" class="boton_borrar">Borrar</button>
       </div>
     </div>
-    <div class="container">
+    <!--FOOTER-->
+    <div class="container-fluid bg-dark">
       <footer
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4"
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 mb-0"
       >
         <p class="col-md-4 mb-0 text-white">&copy; 2022 Company, Inc</p>
 
@@ -109,14 +149,5 @@
         </ul>
       </footer>
     </div>
-    <script>
-      var navLinks = document.getElementById("navLinks");
-      function showMenu() {
-        navLinks.style.right = "0";
-      }
-      function hideMenu() {
-        navLinks.style.right = "-200px";
-      }
-    </script>
   </body>
 </html>
