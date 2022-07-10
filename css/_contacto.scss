@@ -1,0 +1,35 @@
+@import "mixins";
+@import "variables";
+.formulario {
+  padding: 10px 100px;
+  min-height: 68vh;
+  padding: 0;
+}
+.boton_enviar {
+  background-color: map-get($colores, azul);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.boton_borrar {
+  @extend .boton_enviar;
+  background-color: map-get($colores, rojo);
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    div {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  fieldset {
+    margin: 20px;
+  }
+}

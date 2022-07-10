@@ -1,0 +1,37 @@
+@import "mixins";
+.parent {
+  @include grids;
+}
+
+.image_hombre {
+  display: flex;
+  width: auto;
+  height: 400px;
+}
+.image_hombre img {
+  height: auto;
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  .container-fluid {
+    padding: 0px;
+  }
+
+  .parent {
+    display: flex;
+    flex-direction: column;
+    .image_hombre {
+      height: auto;
+      width: 70%;
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .parent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,81 @@
+@import "mixins";
+@import "variables";
+header {
+  min-width: 100vw;
+  padding: 0, 5rem 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  .logo {
+    width: 100px;
+    cursor: pointer;
+    margin-right: auto;
+  }
+
+  .navitem {
+    margin: 0 0 0 1.5rem;
+
+    .nav-link {
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: map-get($colores, azul);
+      }
+    }
+  }
+}
+.contacto_link {
+  display: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    color: map-get($colores, azul);
+  }
+}
+
+li {
+  color: white;
+}
+@media screen and (max-width: 800px) {
+  header {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 0;
+
+    .contacto_link {
+      display: inline;
+    }
+    .boton_contacto {
+      display: none;
+    }
+    .navitem {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .container-fluid {
+    padding: 0px;
+  }
+  .navitem {
+    margin: 0;
+    padding: 0;
+  }
+  .boton_contacto {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .boton_contacto {
+    display: none;
+  }
+}
