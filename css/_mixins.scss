@@ -1,14 +1,14 @@
 @mixin grids {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  justify-items: center;
-  align-items: center;
-  margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	justify-items: center;
+	align-items: center;
+	margin-top: 20px;
 }
 @mixin sizes($height, $width) {
-  height: $height;
-  width: $width;
+	height: $height;
+	width: $width;
 }
