@@ -12,3 +12,20 @@
 	height: $height;
 	width: $width;
 }
+@mixin normalGrid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: auto;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	justify-items: center;
+	align-items: center;
+	margin-top: 20px;
+}
+@mixin divs {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	min-height: 320px;
+	max-height: 320px;
+}

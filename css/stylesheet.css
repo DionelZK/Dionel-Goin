@@ -53,6 +53,9 @@
 	.parent {
 		grid-template-columns: repeat(2, 1fr);
 	}
+	.fondo {
+		display: none;
+	}
 }
 .colores--rojo {
 	background-color: rgb(158, 25, 25);
@@ -149,7 +152,7 @@ li {
 	color: white;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 	header {
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 		position: -webkit-sticky;
@@ -189,6 +192,122 @@ li {
 }
 .contenedor {
 	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: auto;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	justify-items: center;
+	align-items: center;
+	margin-top: 20px;
+}
+.contenedor .divIndex {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	min-height: 320px;
+	max-height: 320px;
+}
+.contenedor .divIndex img {
+	height: auto;
+	width: 100%;
+}
+.contenedor .texto {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+}
+.contenedor .texto p {
+	font-size: 13px;
+	margin: 0;
+}
+
+.divIndex:hover {
+	border: 1px solid black;
+}
+
+.titulo {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	margin-bottom: 20px;
+	color: white;
+}
+
+.subTitulo {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	padding: 15px;
+	color: black;
+}
+
+.contenedorLogos {
+	display: grid;
+	grid-template-columns: repeat(6, 100px);
+	justify-content: center;
+	min-height: 27.1vh;
+}
+
+@media screen and (max-width: 1000px) {
+	.container-fluid {
+		padding: 0px;
+	}
+	.contenedor {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+	}
+	.contenedor .divIndex {
+		display: flex;
+		justify-content: center;
+		min-height: 420px;
+		max-height: 420px;
+	}
+	.contenedor .divIndex img {
+		height: auto;
+		width: 100%;
+	}
+	.contenedor .divIndex p {
+		text-align: center;
+	}
+	.contenedorLogos {
+		display: grid;
+		grid-template-columns: repeat(2, 100px);
+		justify-content: center;
+		-moz-column-gap: 5px;
+		column-gap: 5px;
+		row-gap: 5px;
+		align-items: center;
+	}
+}
+@media screen and (max-width: 220px) {
+	.contenedorLogos {
+		display: flex;
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 425px) {
+	.contenedor {
+		display: flex;
+		flex-direction: column;
+	}
+}
+.tituloNinos {
+	color: white;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.subTituloNinos {
+	padding-left: 10px;
+	font-size: 30px;
+}
+
+.contenedorNinos {
+	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, 1fr);
 	grid-column-gap: 10px;
@@ -196,74 +315,83 @@ li {
 	justify-items: center;
 	align-items: center;
 	margin-top: 20px;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: auto;
-	min-height: 79.7vh;
 	margin: 0;
 	padding: 0;
+	align-items: center;
 }
-.contenedor img {
-	display: flex;
-	height: auto;
+.contenedorNinos .divNinos {
 	width: 70%;
-	margin: 0;
-	padding: 0;
-}
-.contenedor .zapas {
 	display: flex;
-	width: auto;
-	height: 500px;
-	margin: 0;
-	padding: 0;
+	flex-direction: column;
+	min-height: 320px;
+	max-height: 320px;
 }
-.contenedor .zapas img {
+.contenedorNinos .divNinos img {
 	height: auto;
-	width: 70%;
-	margin: 0;
+	width: 100%;
+}
+.contenedorNinos .textoNinos {
+	display: flex;
+	flex-direction: column;
 	padding: 0;
+	margin: 0;
+}
+.contenedorNinos .textoNinos p {
+	font-size: 13px;
+	margin: 0;
 }
 
-.titulo {
-	display: flex;
-	justify-content: center;
+.divNinos:hover {
+	border: 1px solid black;
 }
 
-@media screen and (max-width: 800px) {
-	.container-fluid {
-		padding: 0px;
-	}
-	.contenedor {
-		display: flex;
-		flex-direction: column;
+@media screen and (max-width: 1000px) {
+	.contenedorNinos {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
 	}
-	.contenedor div {
-		display: flex;
+	.contenedorNinos .divNinos {
 		justify-content: center;
+		min-height: 420px;
+		max-height: 420px;
 	}
-	.contenedor div img {
+	.contenedorNinos .divNinos img {
 		height: auto;
-		width: 70%;
+		width: 100%;
 	}
-	.contenedor .zapas img {
-		height: 33%;
-		width: auto;
+	.contenedorNinos .divNinos p {
+		text-align: center;
 	}
 }
-.tituloNosotros {
+@media screen and (max-width: 425px) {
+	.contenedorNinos {
+		display: flex;
+		flex-direction: column;
+	}
+}
+.divMaps {
 	display: flex;
 	justify-content: center;
+	min-height: 68.8vh;
 }
 
-.nosotrosImagen {
-	display: flex;
-	width: auto;
-	height: 200px;
+.maps {
+	width: 95%;
 }
 
-.imgNosotros {
-	height: auto;
-	width: 80%;
+.fondo {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	min-height: 600px;
+	background-image: url(https://www.fororegonstate.org/images/default-source/1.0-get-involved/events/adidas-shopping-pass/1920x600_bannerimage_adidas_spring2022.jpg?sfvrsn=7ac7fe44_3);
+}
+
+.tituloMujer {
+	color: white;
 }
 
 * {

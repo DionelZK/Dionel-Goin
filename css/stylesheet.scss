@@ -1,13 +1,15 @@
-@import "variables";
-@import "mixins";
-@import "hombre";
-@import "contacto";
-@import "header";
-@import "inicio";
-@import "sobreNosotros";
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Montserrat", sans-serif;
 }
+
+@import "variables";
+@import "mixins";
+@import "hombre";
+@import "contacto";
+@import "header";
+@import "inicio";
+@import "ninos";
+@import "nosotros";

@@ -1,0 +1,15 @@
+.fondo {
+	padding: 0;
+	margin: 0;
+	min-height: 600px;
+	background-image: url(https://www.fororegonstate.org/images/default-source/1.0-get-involved/events/adidas-shopping-pass/1920x600_bannerimage_adidas_spring2022.jpg?sfvrsn=7ac7fe44_3);
+	background: no-repeat center;
+}
+.tituloMujer {
+	color: white;
+}
+@media screen and (max-width: 1400px) {
+	.fondo {
+		display: none;
+	}
+}

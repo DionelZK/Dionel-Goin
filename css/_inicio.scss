@@ -1,58 +1,88 @@
 @import "mixins";
 .contenedor {
-	@include grids;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: auto;
-	min-height: 79.7vh;
-	margin: 0;
-	padding: 0;
-	img {
-		display: flex;
-		@include sizes(auto, 70%);
-		margin: 0;
-		padding: 0;
-	}
-
-	.zapas {
-		display: flex;
-		width: auto;
-		height: $altura * 2;
-		margin: 0;
-		padding: 0;
-
+	@include normalGrid;
+	.divIndex {
+		@include divs;
 		img {
-			@include sizes(auto, 70%);
-			margin: 0;
-			padding: 0;
+			@include sizes(auto, 100%);
 		}
 	}
+	.texto {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		margin: 0;
+		p {
+			font-size: 13px;
+			margin: 0;
+		}
+	}
+}
+
+.divIndex:hover {
+	border: 1px solid black;
 }
 .titulo {
 	display: flex;
 	justify-content: center;
+	padding: 10px;
+	margin-bottom: 20px;
+	color: white;
 }
-
-@media screen and (max-width: 800px) {
+.subTitulo {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	padding: 15px;
+	color: black;
+}
+.contenedorLogos {
+	display: grid;
+	grid-template-columns: repeat(6, 100px);
+	justify-content: center;
+	min-height: 27.1vh;
+}
+@media screen and (max-width: 1000px) {
 	.container-fluid {
 		padding: 0px;
 	}
 	.contenedor {
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
-		div {
+		.divIndex {
 			display: flex;
 			justify-content: center;
+			min-height: 420px;
+			max-height: 420px;
 			img {
 				height: auto;
-				width: 70%;
+				width: 100%;
+			}
+			p {
+				text-align: center;
 			}
 		}
-		.zapas {
-			img {
-				height: 33%;
-				width: auto;
-			}
-		}
+	}
+
+	.contenedorLogos {
+		display: grid;
+		grid-template-columns: repeat(2, 100px);
+		justify-content: center;
+		column-gap: 5px;
+		row-gap: 5px;
+		align-items: center;
+	}
+}
+@media screen and (max-width: 220px) {
+	.contenedorLogos {
+		display: flex;
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 425px) {
+	.contenedor {
+		display: flex;
+		flex-direction: column;
 	}
 }
